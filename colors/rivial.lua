@@ -216,12 +216,6 @@ hi('@lsp.type.type',          { link = 'Type' })
 hi('@lsp.type.typeParameter', { link = 'TypeDef' })
 hi('@lsp.type.variable',      { link = 'Identifier' })
 
--- Custom tree sitter highlights
-hi('@RivialVariable', { link = "Definition" })
-hi('@RivialFunction', { link = "Definition" })
-hi('@RivialType',     { link = "Definition" })
-hi('@RivialNormal',   { fg = "white" })
-
 if vim.o.background == 'light' then
     hi('Delimiter',      { fg = '#666666' })
 
@@ -338,4 +332,12 @@ else
     hi('Removed',          { fg = 'Red',                                   ctermfg = 'Red' })
 
     hi('Definition',       { fg = "Cyan" })
+
+    -- Custom tree sitter highlights
+    hi('@RivialVariable', { fg = "Cyan" })
+    hi('@RivialFunction', { fg = "Yellow" })
+    hi('@RivialField',    { fg = "Cyan" })
+    hi('@RivialType',     { fg = "Orange" })
+    hi('@RivialNormal',   { fg = "White" })
+
 end
